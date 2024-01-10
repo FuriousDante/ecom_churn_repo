@@ -1,5 +1,5 @@
 steps:
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build', '-t', 'us-central1-docker.pkg.dev/${PROJECT_ID}/ecom_churn/ecom_churn:v1', '.']
+  args: ['build', '-t', 'us-central1-docker.pkg.dev/${PROJECT_ID}/ecom-churn/ecom-churn:v1', '.']
 images:
-- 'us-central1-docker.pkg.dev/${PROJECT_ID}/ecom_churn/ecom_churn:v1'
+- 'us-central1-docker.pkg.dev/${PROJECT_ID}/ecom-churn/ecom-churn:v1'
