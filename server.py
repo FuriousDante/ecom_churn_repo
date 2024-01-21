@@ -1,7 +1,7 @@
 import streamlit as st 
 import pickle
 
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('model_logistic.pkl', 'rb'))
 
 def predict_pro(list1):
     
@@ -29,7 +29,7 @@ def main():
 
     yes_no_dict = {"Yes":1,"No":0}
     
-    st.title("Telco Churn Prediction")
+    st.title("E Commerce Churn Prediction")
     html_temp = """
     <div style="background-color:#b3db86;padding:8px">
     <h2 style="color:black;text-align:center;">Predicting Customer Churn</h2>
@@ -111,6 +111,6 @@ def main():
         else:
              st.error("the custumoer is likely to churn!")
     if st.button("About"):
-        st.text("Built with Streamlit, Best model used: Logitic Regression")
+        st.text("V:2, Model used: Logitic Regression")
 
 main()

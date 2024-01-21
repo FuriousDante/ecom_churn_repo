@@ -75,13 +75,13 @@ X_enc = pd.get_dummies(X, drop_first=True)
 
 X_train, X_test, y_train, y_test = train_test_split(X_enc,y, test_size=0.1,random_state=111,stratify=y)
 
-model_list =[GaussianNB()]
+model_list =[LogisticRegression()]
 for model in model_list:
 
     print("\n***** Performing for {0} *****".format(model))
     model, pred_train, pred_test = model_building(X_train, y_train,X_test,model,params = None)
     model_evaluation(y_train, pred_train, y_test, pred_test)
 
-pickle.dump(model, open("D:/Academics & Learning/MSc in Artificial Intelligence/Q7/Master's Dissertation Part 1/Models/model.pkl",'wb'))
+pickle.dump(model, open("D:/Academics & Learning/MSc in Artificial Intelligence/Q7/Master's Dissertation Part 1/Notebooks/model_logistic.pkl",'wb'))
 
 print("Model file executed successfully")
