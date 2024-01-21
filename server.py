@@ -1,7 +1,7 @@
 import streamlit as st 
 import pickle
 
-model = pickle.load(open('model_logistic.pkl', 'rb'))
+model = pickle.load(open('model_svc.pkl', 'rb'))
 
 def predict_pro(list1):
     
@@ -111,6 +111,6 @@ def main():
         else:
              st.error("the custumoer is likely to churn!")
     if st.button("About"):
-        st.text("V:2, Model used: Logitic Regression")
+        st.text("V:3, Model used: Support Vector Classifier")
 
 main()
